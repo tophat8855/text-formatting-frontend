@@ -1,6 +1,10 @@
 Enter your text
 
 <form class="" method="get">
-  {{textarea value=text}}
-  <button {{action "submit"}}>Submit</button>
+  {{textarea value=text id="textbox"}}
+  <button id='submitText' {{action "submit" text}}>Submit</button>
 </form>
+
+<div id="result">
+  {{result}}
+</div>
