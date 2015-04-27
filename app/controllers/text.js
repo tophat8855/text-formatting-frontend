@@ -12,6 +12,8 @@ export default Ember.Controller.extend({
         Ember.run(function() {
           formattedText = results.text;
           _this.set('result', formattedText);
+          _this.set('original', text);
+          _this.set('text', "");
         });
       });
     }

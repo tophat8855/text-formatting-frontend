@@ -1,10 +1,26 @@
 Enter your text
 
 <form class="" method="get">
-  {{textarea value=text id="textbox"}}
+  {{textarea value=text id='textbox'}}
   <button id='submitText' {{action "submit" text}}>Submit</button>
 </form>
 
-<div id="result">
-  {{result}}
-</div>
+{{#if result}}
+  <div>
+    <p>
+      You submitted:
+    </p>
+
+    <p>
+      {{original}}
+    </p>
+
+    <p>
+      After formatting:
+    </p>
+
+    <p id='result'>
+      {{result}}
+    </p>
+  </div>
+{{/if}}
